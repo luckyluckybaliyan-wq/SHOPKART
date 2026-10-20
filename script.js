@@ -1,4 +1,24 @@
-
+{
+  id: 7,
+  name: "Running Shoes",
+  price: 1299,
+  category: "Fashion",
+  image: "https://placehold.co/300x300?text=Shoes"
+},
+{
+  id: 8,
+  name: "Smart Watch",
+  price: 1999,
+  category: "Electronics",
+  image: "https://placehold.co/300x300?text=Watch"
+},
+{
+  id: 9,
+  name: "Wireless Headphones",
+  price: 1499,
+  category: "Electronics",
+  image: "https://placehold.co/300x300?text=Headphones"
+}
 const defaultProducts = [
   {
     id: 1,
