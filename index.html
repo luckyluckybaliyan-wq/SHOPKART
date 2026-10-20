@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopKart | Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">Shop<span>Kart</span></a>
+    <input id="search" type="search" placeholder="Search for products...">
+    <button class="cart-btn" onclick="showCart()">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Everything You Love, One Place.</h1>
+    <p>Discover amazing products at amazing prices.</p>
+    <a href="#products" class="shop-btn">Shop Now →</a>
+  </section>
+
+  <main class="container" id="products">
+    <h2>Shop by Category</h2>
+    <div class="categories">
+      <button class="category active" data-category="All">All</button>
+      <button class="category" data-category="Shoes">Shoes</button>
+      <button class="category" data-category="Clothing">Clothing</button>
+      <button class="category" data-category="Electronics">Electronics</button>
+      <button class="category" data-category="Accessories">Accessories</button>
+    </div>
+
+    <h2>Our Products</h2>
+    <div id="product-list" class="product-grid"></div>
+
+    <section class="admin">
+      <h2>➕ Add Your Own Product</h2>
+      <p>Add any item with your own name, picture and price.</p>
+
+      <form id="product-form">
+        <input id="product-name" placeholder="Product name" required>
+        <input id="product-price" type="number" min="1"
+          placeholder="Price in ₹" required>
+        <select id="product-category" required>
+          <option value="Shoes">Shoes</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Accessories">Accessories</option>
+        </select>
+        <input id="product-image" type="url"
+          placeholder="Paste product image URL" required>
+        <button type="submit">Add Product</button>
+      </form>
+      <p class="hint">
+        Tip: Upload your picture to your project folder and use its path,
+        such as images/shoes.jpg.
+      </p>
+    </section>
+  </main>
+
+  <section id="cart-panel" class="cart-panel" hidden>
+    <button class="close-btn" onclick="closeCart()">✕ Close</button>
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="cart-total">Total: ₹0</h3>
+    <button id="clear-cart" class="clear-btn">Clear Cart</button>
+  </section>
+
+  <footer>
+    <p>© 2026 ShopKart | Your Shopping, Your Choice.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
